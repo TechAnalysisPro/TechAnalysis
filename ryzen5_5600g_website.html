@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">¿Vale la Pena el AMD Ryzen 5 5600G en 2025? | TechAnalysis Pro</title>
+    <meta name="description" id="page-description" content="Análisis completo del AMD Ryzen 5 5600G en 2025. Descubre si este procesador con gráficos integrados sigue siendo una excelente opción para gaming y productividad.">
+    <meta name="keywords" content="AMD Ryzen 5 5600G, procesador 2025, gaming, gráficos integrados, APU, análisis">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" id="og-title" content="¿Vale la Pena el AMD Ryzen 5 5600G en 2025?">
+    <meta property="og:description" id="og-description" content="Análisis completo del AMD Ryzen 5 5600G en 2025. Gaming, productividad y valor por dinero.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    
+    <style>
+        :root {
+            --primary-color: #ff6b35;
+            --secondary-color: #004e89;
+            --accent-color: #00d4aa;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-muted: #808080;
+            --border-color: #333333;
+            --gradient-primary: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            --gradient-secondary: linear-gradient(135deg, #004e89 0%, #00d4aa 100%);
+            --shadow-primary: 0 10px 30px rgba(255, 107, 53, 0.3);
+            --shadow-secondary: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            background: rgba(10, 10, 10, 0.98);
+            box-shadow: var(--shadow-secondary);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .lang-btn.active {
+            background: var(--gradient-primary);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-primary);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin: 4rem 0;
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-secondary);
+            border-color: var(--primary-color);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .card-content {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Performance Table */
+        .performance-table {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .table-header {
+            background: var(--gradient-primary);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .table-header h3 {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .table-content {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        tr:hover {
+            background: rgba(255, 107, 53, 0.05);
+        }
+
+        /* Ad Spaces */
+        .ad-space {
+            background: linear-gradient(135deg, var(--card-bg) 0%, rgba(255, 107, 53, 0.1) 100%);
+            border: 2px dashed var(--border-color);
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ad-space::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .ad-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .ad-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .ad-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .ad-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--gradient-secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .ad-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 212, 170, 0.3);
+        }
+
+        /* Affiliate Links */
+        .affiliate-section {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .affiliate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .affiliate-card {
+            background: rgba(255, 107, 53, 0.05);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .affiliate-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+        }
+
+        .affiliate-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .affiliate-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-primary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-disclaimer {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .language-selector {
+                flex-wrap: wrap;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Scroll Animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <div class="logo">TechAnalysis Pro</div>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="es">🇪🇸 ES</button>
+                <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
+                <button class="lang-btn" data-lang="pt">🇧🇷 PT</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero loading">
+                <h1 id="hero-title">¿Vale la Pena el AMD Ryzen 5 5600G en 2025?</h1>
+                <p class="subtitle" id="hero-subtitle">Análisis completo del procesador con gráficos integrados más popular del mercado</p>
+                <a href="#analysis" class="cta-button" id="hero-cta">Descubre la Respuesta</a>
+            </section>
+
+            <!-- Ad Space 1 -->
+            <div class="ad-space scroll-reveal">
+                <div class="ad-content">
+                    <h3 class="ad-title" id="ad1-title">🔥 Ofertas Exclusivas en Componentes PC</h3>
+                    <p class="ad-description" id="ad1-desc">Encuentra los mejores precios en procesadores, placas base y memoria RAM</p>
+                    <a href="#" class="ad-button" id="ad1-button">Ver Ofertas Ahora</a>
+                </div>
+            </div>
+
+            <!-- Analysis Section -->
+            <section id="analysis" class="content-section scroll-reveal">
+                <h2 class="section-title" id="analysis-title">Análisis Técnico Completo</h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="card-icon">🎮</div>
+                        <h3 class="card-title" id="gaming-title">Rendimiento Gaming</h3>
+                        <p class="card-content" id="gaming-content">
+                            El Ryzen 5 5600G con sus gráficos Radeon Vega 7 integrados sigue siendo competitivo para eSports y gaming casual en 2025. Ideal para títulos como Valorant, CS:GO 2 y League of Legends a 1080p.
+                        </p>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-icon">⚡</div>
+                        <h3 class="card-title" id="performance-title">Productividad</h3>
+                        <p class="card-content" id="performance-content">
+                            Sus 6 núcleos Zen 3 y 12 hilos ofrecen un rendimiento excelente para tareas de oficina, programación, edición ligera de video y multitarea intensiva sin comprometer la eficiencia energética.
+                        </p>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-icon">💰</div>
+                        <h3 class="card-title" id="value-title">Relación Calidad-Precio</h3>
+                        <p class="card-content" id="value-content">
+                            En 2025, el 5600G representa una de las mejores opciones para construcciones de presupuesto, especialmente considerando la plataforma AM4 madura y las opciones de actualización disponibles.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Performance Table -->
+            <section class="scroll-reveal">
+                <div class="performance-table">
+                    <div class="table-header">
+                        <h3 id="table-title">Rendimiento en Juegos Populares (1080p, Gráficos Integrados)</h3>
+                    </div>
+                    <div class="table-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th id="game-header">Juego</th>
+                                    <th id="fps-header">FPS Promedio</th>
+                                    <th id="settings-header">Configuración</th>
+                                    <th id="experience-header">Experiencia</th>
+                                </tr>
+                            </thead>
+                            <tbody id="performance-tbody">
+                                <tr>
+                                    <td>Valorant</td>
+                                    <td>120+ FPS</td>
+                                    <td>Medio-Alto</td>
+                                    <td>Excelente</td>
+                                </tr>
+                                <tr>
+                                    <td>CS:GO 2</td>
+                                    <td>80-100 FPS</td>
+                                    <td>Medio</td>
+                                    <td>Muy Buena</td>
+                                </tr>
+                                <tr>
+                                    <td>League of Legends</td>
+                                    <td>100+ FPS</td>
+                                    <td>Alto</td>
+                                    <td>Excelente</td>
+                                </tr>
+                                <tr>
+                                    <td>Rocket League</td>
+                                    <td>90-110 FPS</td>
+                                    <td>Medio-Alto</td>
+                                    <td>Excelente</td>
+                                </tr>
+                                <tr>
+                                    <td>GTA V</td>
+                                    <td>35-45 FPS</td>
+                                    <td>Bajo-Medio</td>
+                                    <td>Jugable</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Affiliate Section -->
+            <section class="affiliate-section scroll-reveal">
+                <h2 class="section-title" id="buy-title">Mejores Ofertas del Ryzen 5 5600G</h2>
+                <div class="affiliate-grid">
+                    <div class="affiliate-card">
+                        <h4 id="amazon-title">Amazon</h4>
+                        <p id="amazon-desc">Precio competitivo con envío rápido</p>
+                        <a href="#" class="affiliate-link" id="amazon-link">Ver en Amazon</a>
+                    </div>
+                    <div class="affiliate-card">
+                        <h4 id="newegg-title">Newegg</h4>
+                        <p id="newegg-desc">Ofertas especiales para constructores</p>
+                        <a href="#" class="affiliate-link" id="newegg-link">Ver en Newegg</a>
+                    </div>
+                    <div class="affiliate-card">
+                        <h4 id="microcenter-title">Micro Center</h4>
+                        <p id="microcenter-desc">Descuentos en combos con placa base</p>
+                        <a href="#" class="affiliate-link" id="microcenter-link">Ver en Micro Center</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ad Space 2 -->
+            <div class="ad-space scroll-reveal">
+                <div class="ad-content">
+                    <h3 class="ad-title" id="ad2-title">🖥️ Completa tu Setup Gaming</h3>
+                    <p class="ad-description" id="ad2-desc">Encuentra las mejores tarjetas gráficas, monitores y periféricos para tu PC</p>
+                    <a href="#" class="ad-button" id="ad2-button">Explorar Productos</a>
+                </div>
+            </div>
+
+            <!-- Conclusion Section -->
+            <section class="content-section scroll-reveal">
+                <h2 class="section-title" id="conclusion-title">Conclusión: ¿Vale la Pena en 2025?</h2>
+                <div class="content-card">
+                    <div class="card-content" id="conclusion-content">
+                        <p>El AMD Ryzen 5 5600G sigue siendo una opción sólida en 2025, especialmente para usuarios que buscan un equilibrio entre rendimiento y precio. Su capacidad para manejar gaming ligero sin tarjeta gráfica dedicada, combinada con un rendimiento de CPU competitivo, lo convierte en una excelente opción para construcciones de presupuesto.</p>
+                        <br>
+                        <p>Si tu objetivo es gaming de eSports, productividad general, o necesitas una solución temporal mientras esperas una GPU dedicada, el 5600G definitivamente vale la pena. Su plataforma AM4 madura también ofrece excelentes opciones de actualización a futuro.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" class="footer-link" id="privacy-link">Política de Privacidad</a>
+                <a href="#" class="footer-link" id="terms-link">Términos de Uso</a>
+                <a href="#" class="footer-link" id="contact-link">Contacto</a>
+                <a href="#" class="footer-link" id="about-link">Acerca de</a>
+            </div>
+            <p>&copy; 2025 TechAnalysis Pro. <span id="rights-text">Todos los derechos reservados.</span></p>
+            <p class="footer-disclaimer" id="disclaimer-text">
+                Este sitio contiene enlaces de afiliados. Podemos recibir una comisión por compras realizadas a través de estos enlaces sin costo adicional para ti.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Language content data
+        const content = {
+            es: {
+                'page-title': '¿Vale la Pena el AMD Ryzen 5 5600G en 2025? | TechAnalysis Pro',
+                'page-description': 'Análisis completo del AMD Ryzen 5 5600G en 2025. Descubre si este procesador con gráficos integrados sigue siendo una excelente opción para gaming y productividad.',
+                'og-title': '¿Vale la Pena el AMD Ryzen 5 5600G en 2025?',
+                'og-description': 'Análisis completo del AMD Ryzen 5 5600G en 2025. Gaming, productividad y valor por dinero.',
+                'hero-title': '¿Vale la Pena el AMD Ryzen 5 5600G en 2025?',
+                'hero-subtitle': 'Análisis completo del procesador con gráficos integrados más popular del mercado',
+                'hero-cta': 'Descubre la Respuesta',
+                'ad1-title': '🔥 Ofertas Exclusivas en Componentes PC',
+                'ad1-desc': 'Encuentra los mejores precios en procesadores, placas base y memoria RAM',
+                'ad1-button': 'Ver Ofertas Ahora',
+                'analysis-title': 'Análisis Técnico Completo',
+                'gaming-title': 'Rendimiento Gaming',
+                'gaming-content': 'El Ryzen 5 5600G con sus gráficos Radeon Vega 7 integrados sigue siendo competitivo para eSports y gaming casual en 2025. Ideal para títulos como Valorant, CS:GO 2 y League of Legends a 1080p.',
+                'performance-title': 'Productividad',
+                'performance-content': 'Sus 6 núcleos Zen 3 y 12 hilos ofrecen un rendimiento excelente para tareas de oficina, programación, edición ligera de video y multitarea intensiva sin comprometer la eficiencia energética.',
+                'value-title': 'Relación Calidad-Precio',
+                'value-content': 'En 2025, el 5600G representa una de las mejores opciones para construcciones de presupuesto, especialmente considerando la plataforma AM4 madura y las opciones de actualización disponibles.',
+                'table-title': 'Rendimiento en Juegos Populares (1080p, Gráficos Integrados)',
+                'game-header': 'Juego',
+                'fps-header': 'FPS Promedio',
+                'settings-header': 'Configuración',
+                'experience-header': 'Experiencia',
+                'buy-title': 'Mejores Ofertas del Ryzen 5 5600G',
+                'amazon-title': 'Amazon',
+                'amazon-desc': 'Precio competitivo con envío rápido',
+                'amazon-link': 'Ver en Amazon',
+                'newegg-title': 'Newegg',
+                'newegg-desc': 'Ofertas especiales para constructores',
+                'newegg-link': 'Ver en Newegg',
+                'microcenter-title': 'Micro Center',
+                'microcenter-desc': 'Descuentos en combos con placa base',
+                'microcenter-link': 'Ver en Micro Center',
+                'ad2-title': '🖥️ Completa tu Setup Gaming',
+                'ad2-desc': 'Encuentra las mejores tarjetas gráficas, monitores y periféricos para tu PC',
+                'ad2-button': 'Explorar Productos',
+                'conclusion-title': 'Conclusión: ¿Vale la Pena en 2025?',
+                'conclusion-content': 'El AMD Ryzen 5 5600G sigue siendo una opción sólida en 2025, especialmente para usuarios que buscan un equilibrio entre rendimiento y precio. Su capacidad para manejar gaming ligero sin tarjeta gráfica dedicada, combinada con un rendimiento de CPU competitivo, lo convierte en una excelente opción para construcciones de presupuesto.<br><br>Si tu objetivo es gaming de eSports, productividad general, o necesitas una solución temporal mientras esperas una GPU dedicada, el 5600G definitivamente vale la pena. Su plataforma AM4 madura también ofrece excelentes opciones de actualización a futuro.',
+                'privacy-link': 'Política de Privacidad',
+                'terms-link': 'Términos de Uso',
+                'contact-link': 'Contacto',
+                'about-link': 'Acerca de',
+                'rights-text': 'Todos los derechos reservados.',
+                'disclaimer-text': 'Este sitio contiene enlaces de afiliados. Podemos recibir una comisión por compras realizadas a través de estos enlaces sin costo adicional para ti.'
+            },
+            en: {
+                'page-title': 'Is the AMD Ryzen 5 5600G Worth It in 2025? | TechAnalysis Pro',
+                'page-description': 'Complete analysis of the AMD Ryzen 5 5600G in 2025. Discover if this processor with integrated graphics is still an excellent choice for gaming and productivity.',
+                'og-title': 'Is the AMD Ryzen 5 5600G Worth It in 2025?',
+                'og-description': 'Complete analysis of the AMD Ryzen 5 5600G in 2025. Gaming, productivity and value for money.',
+                'hero-title': 'Is the AMD Ryzen 5 5600G Worth It in 2025?',
+                'hero-subtitle': 'Complete analysis of the most popular processor with integrated graphics on the market',
+                'hero-cta': 'Discover the Answer',
+                'ad1-title': '🔥 Exclusive Deals on PC Components',
+                'ad1-desc': 'Find the best prices on processors, motherboards and RAM memory',
+                'ad1-button': 'View Deals Now',
+                'analysis-title': 'Complete Technical Analysis',
+                'gaming-title': 'Gaming Performance',
+                'gaming-content': 'The Ryzen 5 5600G with its integrated Radeon Vega 7 graphics remains competitive for eSports and casual gaming in 2025. Ideal for titles like Valorant, CS:GO 2 and League of Legends at 1080p.',
+                'performance-title': 'Productivity',
+                'performance-content': 'Its 6 Zen 3 cores and 12 threads offer excellent performance for office tasks, programming, light video editing and intensive multitasking without compromising energy efficiency.',
+                'value-title': 'Price-Performance Ratio',
+                'value-content': 'In 2025, the 5600G represents one of the best options for budget builds, especially considering the mature AM4 platform and available upgrade options.',
+                'table-title': 'Performance in Popular Games (1080p, Integrated Graphics)',
+                'game-header': 'Game',
+                'fps-header': 'Average FPS',
+                'settings-header': 'Settings',
+                'experience-header': 'Experience',
+                'buy-title': 'Best Ryzen 5 5600G Deals',
+                'amazon-title': 'Amazon',
+                'amazon-desc': 'Competitive price with fast shipping',
+                'amazon-link': 'View on Amazon',
+                'newegg-title': 'Newegg',
+                'newegg-desc': 'Special offers for builders',
+                'newegg-link': 'View on Newegg',
+                'microcenter-title': 'Micro Center',
+                'microcenter-desc': 'Discounts on motherboard combos',
+                'microcenter-link': 'View on Micro Center',
+                'ad2-title': '🖥️ Complete Your Gaming Setup',
+                'ad2-desc': 'Find the best graphics cards, monitors and peripherals for your PC',
+                'ad2-button': 'Explore Products',
+                'conclusion-title': 'Conclusion: Is It Worth It in 2025?',
+                'conclusion-content': 'The AMD Ryzen 5 5600G remains a solid choice in 2025, especially for users looking for a balance between performance and price. Its ability to handle light gaming without a dedicated graphics card, combined with competitive CPU performance, makes it an excellent option for budget builds.<br><br>If your goal is eSports gaming, general productivity, or you need a temporary solution while waiting for a dedicated GPU, the 5600G is definitely worth it. Its mature AM4 platform also offers excellent future upgrade options.',
+                'privacy-link': 'Privacy Policy',
+                'terms-link': 'Terms of Use',
+                'contact-link': 'Contact',
+                'about-link': 'About',
+                'rights-text': 'All rights reserved.',
+                'disclaimer-text': 'This site contains affiliate links. We may receive a commission for purchases made through these links at no additional cost to you.'
+            },
+            pt: {
+                'page-title': 'Vale a Pena o AMD Ryzen 5 5600G em 2025? | TechAnalysis Pro',
+                'page-description': 'Análise completa do AMD Ryzen 5 5600G em 2025. Descubra se este processador com gráficos integrados ainda é uma excelente opção para gaming e produtividade.',
+                'og-title': 'Vale a Pena o AMD Ryzen 5 5600G em 2025?',
+                'og-description': 'Análise completa do AMD Ryzen 5 5600G em 2025. Gaming, produtividade e custo-benefício.',
+                'hero-title': 'Vale a Pena o AMD Ryzen 5 5600G em 2025?',
+                'hero-subtitle': 'Análise completa do processador com gráficos integrados mais popular do mercado',
+                'hero-cta': 'Descubra a Resposta',
+                'ad1-title': '🔥 Ofertas Exclusivas em Componentes PC',
+                'ad1-desc': 'Encontre os melhores preços em processadores, placas-mãe e memória RAM',
+                'ad1-button': 'Ver Ofertas Agora',
+                'analysis-title': 'Análise Técnica Completa',
+                'gaming-title': 'Desempenho em Jogos',
+                'gaming-content': 'O Ryzen 5 5600G com seus gráficos Radeon Vega 7 integrados continua competitivo para eSports e gaming casual em 2025. Ideal para títulos como Valorant, CS:GO 2 e League of Legends em 1080p.',
+                'performance-title': 'Produtividade',
+                'performance-content': 'Seus 6 núcleos Zen 3 e 12 threads oferecem excelente desempenho para tarefas de escritório, programação, edição leve de vídeo e multitarefa intensiva sem comprometer a eficiência energética.',
+                'value-title': 'Relação Custo-Benefício',
+                'value-content': 'Em 2025, o 5600G representa uma das melhores opções para construções de baixo orçamento, especialmente considerando a plataforma AM4 madura e as opções de atualização disponíveis.',
+                'table-title': 'Desempenho em Jogos Populares (1080p, Gráficos Integrados)',
+                'game-header': 'Jogo',
+                'fps-header': 'FPS Médio',
+                'settings-header': 'Configurações',
+                'experience-header': 'Experiência',
+                'buy-title': 'Melhores Ofertas do Ryzen 5 5600G',
+                'amazon-title': 'Amazon',
+                'amazon-desc': 'Preço competitivo com entrega rápida',
+                'amazon-link': 'Ver na Amazon',
+                'newegg-title': 'Newegg',
+                'newegg-desc': 'Ofertas especiais para construtores',
+                'newegg-link': 'Ver na Newegg',
+                'microcenter-title': 'Micro Center',
+                'microcenter-desc': 'Descontos em combos com placa-mãe',
+                'microcenter-link': 'Ver no Micro Center',
+                'ad2-title': '🖥️ Complete seu Setup Gamer',
+                'ad2-desc': 'Encontre as melhores placas de vídeo, monitores e periféricos para seu PC',
+                'ad2-button': 'Explorar Produtos',
+                'conclusion-title': 'Conclusão: Vale a Pena em 2025?',
+                'conclusion-content': 'O AMD Ryzen 5 5600G continua sendo uma escolha sólida em 2025, especialmente para usuários que buscam um equilíbrio entre desempenho e preço. Sua capacidade de lidar com gaming leve sem placa de vídeo dedicada, combinada com desempenho competitivo de CPU, o torna uma excelente opção para construções de baixo orçamento.<br><br>Se seu objetivo é gaming de eSports, produtividade geral, ou você precisa de uma solução temporária enquanto espera por uma GPU dedicada, o 5600G definitivamente vale a pena. Sua plataforma AM4 madura também oferece excelentes opções de atualização futura.',
+                'privacy-link': 'Política de Privacidade',
+                'terms-link': 'Termos de Uso',
+                'contact-link': 'Contato',
+                'about-link': 'Sobre',
+                'rights-text': 'Todos os direitos reservados.',
+                'disclaimer-text': 'Este site contém links de afiliados. Podemos receber uma comissão por compras realizadas através destes links sem custo adicional para você.'
+            }
+        };
+
+        // Language detection and switching
+        function detectLanguage() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const langCode = userLang.substring(0, 2);
+            
+            // Check URL parameters for language
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            
+            if (urlLang && content[urlLang]) {
+                return urlLang;
+            }
+            
+            // Auto-detect based on search query patterns
+            const searchQuery = document.referrer.toLowerCase();
+            if (searchQuery.includes('vale a pena') || searchQuery.includes('processador') || searchQuery.includes('em 2025')) {
+                return 'pt';
+            } else if (searchQuery.includes('worth it') || searchQuery.includes('processor') || searchQuery.includes('in 2025')) {
+                return 'en';
+            }
+            
+            // Default language detection
+            if (langCode === 'pt') return 'pt';
+            if (langCode === 'en') return 'en';
+            return 'es'; // Default to Spanish
+        }
+
+        function switchLanguage(lang) {
+            // Update content
+            Object.keys(content[lang]).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    if (key.includes('content')) {
+                        element.innerHTML = content[lang][key];
+                    } else {
+                        element.textContent = content[lang][key];
+                    }
+                }
+            });
+
+            // Update meta tags
+            document.title = content[lang]['page-title'];
+            document.querySelector('meta[name="description"]').setAttribute('content', content[lang]['page-description']);
+            document.querySelector('meta[property="og:title"]').setAttribute('content', content[lang]['og-title']);
+            document.querySelector('meta[property="og:description"]').setAttribute('content', content[lang]['og-description']);
+
+            // Update language buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+
+            // Update URL without reload
+            const url = new URL(window.location);
+            url.searchParams.set('lang', lang);
+            window.history.replaceState({}, '', url);
+        }
+
+        // Initialize language
+        document.addEventListener('DOMContentLoaded', function() {
+            const initialLang = detectLanguage();
+            switchLanguage(initialLang);
+
+            // Language button event listeners
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    switchLanguage(btn.dataset.lang);
+                });
+            });
+
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Scroll reveal animation
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.scroll-reveal').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Performance tracking (optional)
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+                }, 0);
+            });
+        }
+    </script>
+</body>
+</html>
+
